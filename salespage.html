@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Page</title>
+    <link rel="stylesheet" href="salespage.css">
+</head>
+<body>
+    <center>
+    <table>
+        <tr>
+            <td>Date :</td><td><input id="dateInput" type="date"></td>
+        </tr>
+        <tr>
+            <td>Product Name :</td><td><input id="productNameInput" type="text" placeholder="Enter the Product name"></td>
+        </tr>
+        <tr>
+            <td>Quantity</td><td><input id="quantityInput" type="number" onchange="calculateTotalPrice()"></td>
+        </tr>
+        <tr>
+            <td>Per Quantity Prize</td><td><input id="perQuantityPriceInput" type="number" onchange="calculateTotalPrice()"></td>
+        </tr>
+        <tr>
+            <td>Total Prize</td><td><input id="totalPriceInput" type="text" readonly></td>
+        </tr>
+        <tr>
+            <td><input type="reset"></td><td><input type="submit"></td>
+        </tr>
+    </table>
+    </center>
+    <script src="salespage.js"></script>
+</body>
+</html>
+<script>
+function calculateTotalPrice() {
+    var quantity = parseFloat(document.getElementById("quantityInput").value);
+    var perQuantityPrice = parseFloat(document.getElementById("perQuantityPriceInput").value);
+    var totalPrice = quantity * perQuantityPrice;
+    document.getElementById("totalPriceInput").value = isNaN(totalPrice) ? '' : totalPrice.toFixed(2);
+}
+</script>
