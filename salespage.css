@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+center {
+    margin-top: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 400px;
+}
+
+td {
+    padding: 10px;
+}
+
+input[type="date"],
+input[type="text"],
+input[type="number"],
+input[type="reset"],
+input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="reset"],
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
